@@ -1,7 +1,9 @@
 The game below simulates a chess board using special moves that are solved by algorithms from the field of artificial intelligence.
 
+
 The game:
 In order to commemorate the upcoming British coronation, I have created a function that starts from one board and tries to reach another using only legal moves. Specifically, I will be using 6x6 boards that are represented as two-dimensional arrays.
+The goal is to move each pawn (king or bishop) and create a sequence of moves such that at the end each king is placed next to a bishop.
 A value of 0 indicates an empty space, while a value of 1 indicates a force field that blocks advancement (marked in the output by "@"). 
 A value of 2 indicates a king - K agent, located at that position (marked in the output by "*"). The king agent moves (as the chess piece K) on straight lines (forward/back or left/right) or diagonally a distance of 1 per turn.
 A value of 3 indicates a bishop - B agent, located at that position (marked in the output by "&"). The bishop agent moves (as the chess piece B) on diagonal lines only, any distance it wants.
@@ -19,47 +21,47 @@ The goal board is the board I want to reach from the starting board through the 
 
 For example:
 Board 1 (starting position):
-1 2 3 4 5 6
-1:* * &
-2: * @ &
+  1 2 3 4 5 6
+1:*   *   &
+2:      * @ &
 3:@
-4: @ @
+4:    @   @
 5:&
 6: @
 -----
 Board 2:
-1 2 3 4 5 6
-1:* * &
-2: * @ &
-3:@ &
-4: @ @
+  1 2 3 4 5 6
+1:*   *   &
+2:      * @ &
+3:@   &
+4:    @   @
 5:
 6: @
 -----
 Board 3:
-1 2 3 4 5 6
-1:* * &
-2: @ &
-3:@ & *
-4: @ @
+  1 2 3 4 5 6
+1:*     * &
+2:        @ &
+3:@   &   *
+4:    @   @
 5:
 6: @
 -----
 Board 4:
-1 2 3 4 5 6
-1:* * &
-2: @ &
-3:@ & *
-4: @ @
+  1 2 3 4 5 6
+1:*     * &
+2:        @ &
+3:@   &   *
+4:    @   @
 5:
 6: @
 -----
 Board 5 (goal position):
-1 2 3 4 5 6
-1: * &
-2: * @ &
-3:@ & *
-4: @ @
+  1 2 3 4 5 6
+1:      * &
+2:  *     @ &
+3:@   &   *
+4:    @   @
 5:
 6: @
 -----
